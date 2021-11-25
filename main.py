@@ -71,9 +71,6 @@ def reverse_Lookup(j_name):
     return None
 
 
-'''Start here'''
-
-
 def main_func(bib_text):
     j_names = Bt.read_bib_Txt(bib_text)
     dict1 = {}
@@ -108,10 +105,12 @@ def main_func(bib_text):
     return dict1
 
 
-bib_texts = [r'Review.text']
+if __name__ == '__main__':
 
-for bib_text in bib_texts:
-    main_func(bib_text)
+    bib_texts = [r'Review.txt']
 
-rearrange()
-cert.convert2txt()
+    for bib_text in bib_texts:
+        main_func(bib_text)
+
+    rearrange()
+    cert.convert2txt()
