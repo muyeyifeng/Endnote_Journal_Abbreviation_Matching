@@ -1,5 +1,9 @@
 import yaml
 
+'''
+The function of this script is to write the yaml document and organize the content of the yaml document.
+'''
+
 
 def _rearrange(yaml_path):
     with open(yaml_path, "r", encoding="utf-8") as f:

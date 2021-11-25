@@ -1,3 +1,8 @@
+"""
+The purpose of this script is to read the list of journals exported by Endnote
+"""
+
+
 def read_bib_Txt(path):
     dic = []
     with open(path, 'r', encoding='utf-8-sig') as f:

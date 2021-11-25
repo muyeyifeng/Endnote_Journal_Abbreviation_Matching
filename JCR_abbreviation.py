@@ -1,6 +1,12 @@
 import requests
 
 
+"""
+The function of this script is to find the full name of the journal 
+in the webofknowledge database according to the JCR abbreviation
+"""
+
+
 def JCR_abbreviation_search(j_name):
     alphabet = j_name.upper()[0]
     if ord(alphabet) < 65:

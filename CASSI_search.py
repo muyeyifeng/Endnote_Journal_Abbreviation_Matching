@@ -51,7 +51,7 @@ def disambiguation(string):
 
     string = string.upper().replace('&amp;', '&')
     string_and = string.replace('&', 'AND')
-    return string,string_and
+    return string, string_and
 
 
 def multiple_choice(response, j_name):
@@ -64,7 +64,7 @@ def multiple_choice(response, j_name):
         value = tr.find('td', {'class': 'value'})
         if name is None or value is None:
             continue
-        value_name=value.get_text().upper()
+        value_name = value.get_text().upper()
         if name.get_text() == 'Publication Title' and j_name.upper() in disambiguation(value_name):
             url = 'https://cassi.cas.org/' + value.find('a').get('href')
             warning(f'Choose the first.')

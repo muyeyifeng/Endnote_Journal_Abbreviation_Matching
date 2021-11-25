@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup as Bs
 
 from style import log, warning, error
 
+"""
+The purpose of this script is to look up the abbreviation of the journal name in the paperpile.com.
+"""
+
 
 def search(j_name):
     url = 'https://paperpile.com/guides/journal-abbreviations-list'

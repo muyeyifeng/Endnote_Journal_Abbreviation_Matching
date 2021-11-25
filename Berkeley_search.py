@@ -1,13 +1,11 @@
-import requests, re, string
-from style import log, warning, error
+import re
+import requests
 from bs4 import BeautifulSoup as Bs
 
+from style import log, warning, error
+
 """
-a-b
-c-g
-h-j
-k-q
-r-z
+The purpose of this script is to look up the abbreviation of the journal name in the Berkeley database.
 """
 
 
@@ -41,14 +39,7 @@ def match(j_name, trs):
 
 
 def search(j_name):
-    page = check_page(j_name)
-    if page is None:
-        return None
-    url = f'https://guides.lib.berkeley.edu/bioscience-journal-abbreviations/{page}'
-    response = requests.post(url)
-    context = response.text
-    soup = Bs(context, 'lxml')
-    divs = soup.find_all('div', {'class': 'clearfix'})
+    divs = get_page_context(j_name)
     for div in divs:
         table = div.find('table')
         if table is not None:
@@ -72,6 +63,16 @@ def reverse_lookup_match(j_name, trs):
 
 
 def reverse_lookup(j_name):
+    divs = get_page_context(j_name)
+    for div in divs:
+        table = div.find('table')
+        if table is not None:
+            trs = table.find_all('tr')
+            return reverse_lookup_match(j_name, trs)
+    return None
+
+
+def get_page_context(j_name):
     page = check_page(j_name)
     if page is None:
         return None
@@ -80,9 +81,4 @@ def reverse_lookup(j_name):
     context = response.text
     soup = Bs(context, 'lxml')
     divs = soup.find_all('div', {'class': 'clearfix'})
-    for div in divs:
-        table = div.find('table')
-        if table is not None:
-            trs = table.find_all('tr')
-            return reverse_lookup_match(j_name, trs)
-    return None
+    return divs

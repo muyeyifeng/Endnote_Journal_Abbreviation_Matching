@@ -1,6 +1,11 @@
 import yaml
 
 
+"""
+Convert yaml to txt document.
+"""
+
+
 def convert2txt():
     yaml_path = 'Journal_abbreviation.yml'
     text_path = 'Journal_abbreviation.txt'

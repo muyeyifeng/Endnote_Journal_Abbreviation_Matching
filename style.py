@@ -10,6 +10,11 @@
 """
 
 
+"""
+This script defines the debug output format.
+"""
+
+
 def log(text):
     print(f'\033[1;32mLog: {text}\033[0m')
 
