@@ -108,14 +108,10 @@ def main_func(bib_text):
     return dict1
 
 
-bib_texts = [r'E:\Users\MuYe\Downloads\Strain.txt',
-             r'E:\Users\MuYe\Downloads\Porous.txt',
-             r'E:\Users\MuYe\Downloads\Review.txt',
-             r'E:\Users\MuYe\Downloads\Research.txt',
-             r'E:\Users\MuYe\Downloads\diaoyan.txt']
+bib_texts = [r'Review.text']
+
+for bib_text in bib_texts:
+    main_func(bib_text)
 
 rearrange()
 cert.convert2txt()
-for bib_text in bib_texts:
-    break
-    main_func(bib_text)
