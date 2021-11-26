@@ -15,8 +15,8 @@ def search(j_name):
     """
     url = 'https://paperpile.com/guides/journal-abbreviations-list'
     response = requests.post(url)
-    context = response.text
-    soup = Bs(context, 'lxml')
+    content = response.text
+    soup = Bs(content, 'lxml')
     abb_urls = soup.find_all('a')
     for abb_url in abb_urls:
         if abb_url.get_text().upper() == j_name.upper():
@@ -32,8 +32,8 @@ def get_Abbreviation(url):
     :return: {str} Journal abbreviated
     """
     response = requests.get(url)
-    context = response.text
-    soup = Bs(context, 'lxml')
+    content = response.text
+    soup = Bs(content, 'lxml')
     try:
         figure = soup.find('figure', {'class': 'infotable striped'})
         trs = figure.find_all('tr')

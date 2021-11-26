@@ -52,7 +52,7 @@ def search(j_name):
     :param j_name: {str} Journal name
     :return: {str} Journal abbreviation
     """
-    divs = get_page_context(j_name)
+    divs = get_page_content(j_name)
     if divs is not None:
         for div in divs:
             table = div.find('table')
@@ -86,7 +86,7 @@ def reverse_lookup(j_name):
     :param j_name: {str} Non-stander journal name
     :return: {str} Full journal name
     """
-    divs = get_page_context(j_name)
+    divs = get_page_content(j_name)
     if divs is None:
         return None
     for div in divs:
@@ -97,7 +97,7 @@ def reverse_lookup(j_name):
     return None
 
 
-def get_page_context(j_name):
+def get_page_content(j_name):
     """
     :param j_name: {str} Journal name
     :return: {object} Html page element
@@ -107,7 +107,7 @@ def get_page_context(j_name):
         return None
     url = f'https://guides.lib.berkeley.edu/bioscience-journal-abbreviations/{page}'
     response = requests.post(url)
-    context = response.text
-    soup = Bs(context, 'lxml')
+    content = response.text
+    soup = Bs(content, 'lxml')
     divs = soup.find_all('div', {'class': 'clearfix'})
     return divs
