@@ -8,6 +8,10 @@ in the webofknowledge database according to the JCR abbreviation
 
 
 def JCR_abbreviation_search(j_name):
+    """
+    :param j_name:  {str} Journal name
+    :return: {str} Journal abbreviated
+    """
     alphabet = j_name.upper()[0]
     if ord(alphabet) < 65:
         alphabet = '0-9'

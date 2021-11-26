@@ -10,6 +10,10 @@ The purpose of this script is to look up the abbreviation of the journal name in
 
 
 def check_page(j_name):
+    """
+    :param j_name: {str} Journal name
+    :return: {str} Page name
+    """
     asii = ord(j_name.lower()[0])
     if asii == 97 or asii == 98:
         page = 'a-b'
@@ -27,6 +31,11 @@ def check_page(j_name):
 
 
 def match(j_name, trs):
+    """
+    :param j_name: {str} Journal name
+    :param trs: {object} Table's element
+    :return: {str} Journal abbreviation
+    """
     for tr in trs:
         tds = tr.find_all('td')
         if tds is not None and len(tds) == 2:
@@ -39,17 +48,27 @@ def match(j_name, trs):
 
 
 def search(j_name):
+    """
+    :param j_name: {str} Journal name
+    :return: {str} Journal abbreviation
+    """
     divs = get_page_context(j_name)
-    for div in divs:
-        table = div.find('table')
-        if table is not None:
-            trs = table.find_all('tr')
-            return match(j_name, trs)
+    if divs is not None:
+        for div in divs:
+            table = div.find('table')
+            if table is not None:
+                trs = table.find_all('tr')
+                return match(j_name, trs)
     warning(f'The journal does not exist in the list. {j_name}')
     return None
 
 
 def reverse_lookup_match(j_name, trs):
+    """
+    :param j_name: {str} Non-stander journal name
+    :param trs: {object} Table's element
+    :return: {str} Full journal name
+    """
     for tr in trs:
         tds = tr.find_all('td')
         if tds is not None and len(tds) == 2:
@@ -63,7 +82,13 @@ def reverse_lookup_match(j_name, trs):
 
 
 def reverse_lookup(j_name):
+    """
+    :param j_name: {str} Non-stander journal name
+    :return: {str} Full journal name
+    """
     divs = get_page_context(j_name)
+    if divs is None:
+        return None
     for div in divs:
         table = div.find('table')
         if table is not None:
@@ -73,6 +98,10 @@ def reverse_lookup(j_name):
 
 
 def get_page_context(j_name):
+    """
+    :param j_name: {str} Journal name
+    :return: {object} Html page element
+    """
     page = check_page(j_name)
     if page is None:
         return None

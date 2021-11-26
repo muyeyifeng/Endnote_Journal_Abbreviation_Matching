@@ -9,6 +9,10 @@ The purpose of this script is to look up the abbreviation of the journal name in
 
 
 def search(j_name):
+    """
+    :param j_name:  {str} Journal name
+    :return: {str} Journal abbreviated
+    """
     url = 'https://paperpile.com/guides/journal-abbreviations-list'
     response = requests.post(url)
     context = response.text
@@ -23,6 +27,10 @@ def search(j_name):
 
 
 def get_Abbreviation(url):
+    """
+    :param url: {str} The url of the journal details page
+    :return: {str} Journal abbreviated
+    """
     response = requests.get(url)
     context = response.text
     soup = Bs(context, 'lxml')

@@ -16,12 +16,24 @@ This script defines the debug output format.
 
 
 def log(text):
+    """
+    :param text: {str} Log content
+    :return: null
+    """
     print(f'\033[1;32mLog: {text}\033[0m')
 
 
 def warning(text):
+    """
+    :param text: {str} Warning content
+    :return: null
+    """
     print(f'\033[1;33mWaring: {text}\033[0m')
 
 
 def error(text):
+    """
+    :param text: {str} Error content
+    :return: null
+    """
     print(f'\033[1;31mError: {text}\033[0m')

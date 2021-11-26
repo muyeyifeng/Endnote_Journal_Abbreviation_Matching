@@ -6,6 +6,10 @@ from style import warning, error
 
 
 def search(j_name):
+    """
+    :param j_name: {str} Journal name
+    :return: {str} Journal abbreviation
+    """
     url = 'https://cassi.cas.org/searching.jsp'
     body = {
         'searchIn': 'titles',
@@ -29,6 +33,10 @@ def search(j_name):
 
 
 def get_table_value(response):
+    """
+    :param response: {str} Content of a http requests
+    :return: {str} Journal abbreviated
+    """
     soup = Bs(response, 'lxml')
 
     table = soup.find('table', id='publication')
@@ -46,6 +54,10 @@ def get_table_value(response):
 
 
 def disambiguation(string):
+    """
+    :param string: {str} The name contains certain symbols or '&'
+    :return: {list} Clear the string of special symbols
+    """
     punc = '\n'
     string = re.sub(r"[%s]+" % punc, "", string)
 
@@ -55,6 +67,11 @@ def disambiguation(string):
 
 
 def multiple_choice(response, j_name):
+    """
+    :param response: {str} Content of a http requests
+    :param j_name:  {str} Journal name
+    :return: {str} Journal abbreviated
+    """
     soup = Bs(response, 'lxml')
 
     table = soup.find('table', id='publication')
