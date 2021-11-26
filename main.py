@@ -55,7 +55,7 @@ def local_database_comparison(j_name):
 def equivalent_journal_name_local(j_name):
     """
     :param j_name: {str} Non-stander journal name
-    :return: {str} Journal full name from local databse
+    :return: {str} Journal full name from local database
     """
     with open('Equivalent_journal_name.yml', 'r', encoding='utf-8') as f:
         data = yaml.load(f, Loader=yaml.FullLoader)

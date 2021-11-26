@@ -9,7 +9,6 @@
 37 | 47 | 白色
 """
 
-
 """
 This script defines the debug output format.
 """

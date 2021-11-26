@@ -3,7 +3,7 @@ import requests
 
 """
 The function of this script is to find the full name of the journal 
-in the webofknowledge database according to the JCR abbreviation
+in the web of knowledge database according to the JCR abbreviation
 """
 
 

@@ -12,11 +12,14 @@ How to use (Endnote x20):
 
     3.Run the main() function.
 
-    4.The matching results are saved in Journal_abbreviation.txt, and the unmatched journals are saved in Unmatched_journals.yml.
+    4.The matching results are saved in Journal_abbreviation.txt,
+    and the unmatched journals are saved in Unmatched_journals.yml.
 
-    5.Unmatched journals need to be manually searched and added. The original intention of this project is to satisfy its own use and will not actively improve the journal list (Journal_abbreviation.yml).
+    5.Unmatched journals need to be manually searched and added. The original intention of this project is to 
+    satisfy its own use and will not actively improve the journal list (Journal_abbreviation.yml).
 
-    6.Clear the default journal list in Endnote (Library->Open Term Lists->Journals Term Lists->Select All->Delete Term), and import Journal_abbreviation.txt (Library->Open Term Lists->Journals Term Lists->Lists ->Import List...)
+    6.Clear the default journal list in Endnote (Library->Open Term Lists->Journals Term Lists->Select All->Delete Term),
+    and import The_result_of_this_run.txt (Library->Open Term Lists->Journals Term Lists->Lists ->Import List...)
 
 使用方法（Endnote x20）：
 
@@ -26,8 +29,9 @@ How to use (Endnote x20):
 
     3.运行main()函数。
 
-    4.匹配结果保存在Journal_abbreviation.txt，未匹配到的期刊保存在Unmatched_journals.yml。
+    4.匹配结果保存在The_result_of_this_run.txt，未匹配到的期刊保存在Unmatched_journals.yml。
 
     5.未匹配到的期刊需要手动查找添加，本项目的初衷是满足自身使用，并不会主动完善期刊列表（Journal_abbreviation.yml）。
 
-    6.在Endnote中清空默认的期刊列表(Library->Open Term Lists->Journals Term Lists->选择所有->Delete Term）,并导入Journal_abbreviation.txt（Library->Open Term Lists->Journals Term Lists->Lists->Import List...）
+    6.在Endnote中清空默认的期刊列表(Library->Open Term Lists->Journals Term Lists->选择所有->Delete Term）,
+    并导入Journal_abbreviation.txt（Library->Open Term Lists->Journals Term Lists->Lists->Import List...）
