@@ -23,7 +23,7 @@ Advanced Intelligent Systems	Adv. Intell. Syst.
 ADVANCED MATERIALS	Adv. Mater.
 Advanced Materials Technologies	Adv. Mater. Technol.
 Advanced Science	Adv. Sci.
-Advanced Sustainable Systems	Adv. Sustain. Syst.
+Advanced Sustainable Systems	Adv. Sustainable Syst.
 Angewandte Chemie	Angew. Chem.
 Angewandte Chemie (International ed. in English)	Angew. Chem. Int. Ed. Engl.
 Annalen der Physik	Ann. Phys.
@@ -53,7 +53,7 @@ Chinese Journal of Polymer Science	Chin. J. Polym. Sci.
 Circuit World	Circuit World
 Composite Structures	Compos. Struct.
 COMPOSITES PART A-APPLIED SCIENCE AND MANUFACTURING	Compos. Pt. A-Appl. Sci. Manuf.
-Composites Part B: Engineering	Compos. B. Eng.
+Composites Part B: Engineering	Composites, Part B
 Composites Science and Technology	Compos. Sci. Technol.
 Composites, Part A: Applied Science and Manufacturing	Compos. Part A Appl. Sci. Manuf.
 Electroanalysis	Electroanalysis
@@ -109,7 +109,7 @@ Journal of Materials Chemistry B: Materials for Biology and Medicine	J. Mater. C
 Journal of Materials Chemistry C	J. Mater. Chem. C
 Journal of Materials Chemistry C: Materials for Optical and Electronic Devices	J. Mater. Chem. C
 Journal of Materials Science & Technology	J. Mater. Sci. Technol.
-Journal of Materials Science: Materials in Electronics	J. Mater. Sci.-Mater. Electron.
+Journal of Materials Science: Materials in Electronics	J. Mater. Sci.: Mater. Electron.
 JOURNAL OF MEDICAL ENGINEERING & TECHNOLOGY	J. Med. Eng. Technol.
 Journal of Micromechanics and Microengineering	J. Micromech. Microeng.
 Journal of Nanoscience and Nanotechnology	J. Nanosci. Nanotechnol.
@@ -178,7 +178,7 @@ Polymer Reviews	Polym. Rev.
 Polymers	Polymers
 Polymers (Basel)	Polymers
 Proceedings of the Ieee	Proc. IEEE
-Proceedings of the National Academy of Sciences of the United States of America	Proc. Natl. Acad. Sci. U. S. A.
+Proceedings of the National Academy of Sciences of the United States of America	Proc. Natl. Acad. Sci. U.S.A.
 Prog. Mater. Sci.	Prog. Mater. Sci.
 PROGRESS IN CHEMISTRY	Prog. Chem.
 Robotics and Autonomous Systems	Robot. Auton. Syst.
@@ -203,7 +203,7 @@ Small Methods	Small Methods
 Smart Mater. Struct.	Smart Mater. Struct.
 Smart Materials and Structures	Smart Mater. Struct.
 Solar Energy Materials and Solar Cells	Sol. Energy Mater. Sol. Cells
-Solid State Ionics	Solid State Ion.
+Solid State Ionics	Solid State Ionics
 SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES	Surg. Endosc.
 Synthetic Metals	Synth. Met.
 Text. Res. J.	Text. Res. J.

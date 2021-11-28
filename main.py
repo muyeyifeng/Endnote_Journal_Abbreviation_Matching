@@ -6,7 +6,11 @@ import CASSI_search as Cas
 import Paperpile_search as Pap
 from JCR_abbreviation import JCR_abbreviation_search as Jcr
 from style import log, warning, error
-from rearrange import write_yaml, rearrange
+import rearrange
+
+
+local_journal_abbreviation = None
+local_equivalent_journal_name = None
 
 
 def find_matches(j_name):
@@ -23,19 +27,19 @@ def find_matches(j_name):
     log('Use Berkeley')
     ber_result = Ber.search(j_name)
     if ber_result is not None:
-        write_yaml(yaml_path, j_name, ber_result)
+        rearrange.write_yaml(yaml_path, j_name, ber_result)
         return ber_result
 
     log('Use Paperpile')
     pap_result = Pap.search(j_name)
     if pap_result is not None:
-        write_yaml(yaml_path, j_name, pap_result)
+        rearrange.write_yaml(yaml_path, j_name, pap_result)
         return pap_result
 
     log('Use CASSI')
     cas_result = Cas.search(j_name)
     if cas_result is not None:
-        write_yaml(yaml_path, j_name, cas_result)
+        rearrange.write_yaml(yaml_path, j_name, cas_result)
         return cas_result
     return None
 
@@ -45,10 +49,8 @@ def local_database_comparison(j_name):
     :param j_name: {str} Journal name
     :return: {str} Journal_abbreviation from local_database
     """
-    with open('Journal_abbreviation.yml', 'r', encoding='utf-8') as f:
-        data = yaml.load(f, Loader=yaml.FullLoader)
-        if data is not None and j_name in data:
-            return data[j_name]
+    if j_name in local_journal_abbreviation:
+        return local_journal_abbreviation[j_name]
     return None
 
 
@@ -57,10 +59,8 @@ def equivalent_journal_name_local(j_name):
     :param j_name: {str} Non-stander journal name
     :return: {str} Journal full name from local database
     """
-    with open('Equivalent_journal_name.yml', 'r', encoding='utf-8') as f:
-        data = yaml.load(f, Loader=yaml.FullLoader)
-        if data is not None and j_name in data:
-            return data[j_name]
+    if j_name in local_equivalent_journal_name:
+        return local_equivalent_journal_name[j_name]
     return None
 
 
@@ -121,7 +121,7 @@ def main_func(bib_text):
             if ejn is not None:
                 log(f'Find the full name of the journal. {ejn}')
                 yaml_path = 'Equivalent_journal_name.yml'
-                write_yaml(yaml_path, j_name, ejn)
+                rearrange.write_yaml(yaml_path, j_name, ejn)
 
                 abbreviation = find_matches(ejn)
                 if abbreviation is not None:
@@ -131,7 +131,7 @@ def main_func(bib_text):
             else:
                 warning('Unable to find the full name of the journal.')
 
-        write_yaml('Unmatched_journals.yml', j_name, None)
+        rearrange.write_yaml('Unmatched_journals.yml', j_name, None)
         error(f"No match. {j_name}")
     return dict1
 
@@ -150,10 +150,21 @@ def write_txt(dict1):
             f.write(name + '\t' + value + '\n')
 
 
-if __name__ == '__main__':
-    bib_texts = [r'Journal_list.txt']
-    for bib_text in bib_texts:
-        dict1 = main_func(bib_text)
-        write_txt(dict1)
+def load_local_database():
+    global local_journal_abbreviation, local_equivalent_journal_name
+    with open('Journal_abbreviation.yml', 'r', encoding='utf-8') as f:
+        local_journal_abbreviation = yaml.load(f, Loader=yaml.FullLoader)
+    with open('Equivalent_journal_name.yml', 'r', encoding='utf-8') as f:
+        local_equivalent_journal_name = yaml.load(f, Loader=yaml.FullLoader)
+    if local_equivalent_journal_name is None or local_journal_abbreviation is None:
+        error('Loading local database error.')
 
-    rearrange()
+
+if __name__ == '__main__':
+    load_local_database()
+    bib_texts = [r'Journal_list.txt']
+    for _bib_text in bib_texts:
+        _dict1 = main_func(_bib_text)
+        write_txt(_dict1)
+
+    rearrange.rearrange()
