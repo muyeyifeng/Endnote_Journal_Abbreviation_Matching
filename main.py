@@ -213,4 +213,4 @@ if __name__ == '__main__':
             rearrange.write_result_txt(bib_text_path, result_dict1)
 
     completed()
-    input('按任意键关闭窗口.')
+    input('Press any key to close the window.')
