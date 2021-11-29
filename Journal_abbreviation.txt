@@ -1,6 +1,72 @@
 2D Materials	2D Mater.
 3 Biotech	3 Biotech
 3D Printing and Additive Manufacturing	3D Print. Addit. Manuf.
+3D Printing in Medicine	3D Print. Med.
+AAPG Bulletin	AAPG Bull.
+AAPG Memoir	AAPG Mem.
+AAPS Journal	AAPS J.
+AATCC Journal of Research	AATCC J. Res.
+AATCC Review	AATCC Rev.
+ABB Review	ABB Rev.
+ACA Transactions	ACA Trans.
+ACH - Models in Chemistry	ACH - Models Chem.
+ACI Materials Journal	ACI Mater. J.
+ACI Structural Journal	ACI Struct. J.
+ACM Computing Surveys	ACM Comput. Surv.
+ACM Digital Threats: Research and Practice	ACM Digital Threats: Res. Pract.
+ACM Inroads	ACM Inroads
+ACM Journal of Data and Information Quality	ACM J. Data Inf. Qual.
+ACM Journal of Experimental Algorithmics	ACM J. Exp. Algorithmics
+ACM Journal on Computing and Cultural Heritage	ACM J. Comput. Cult. Heritage
+ACM Journal on Emerging Technologies in Computing	ACM J. Emerging Technol. Comput.
+ACM Journal on Emerging Technologies in Computing Systems	ACM J. Emerging Technol. Comput. Syst.
+ACM Queue	ACM Queue
+ACM Transactions on Accessible Computing	ACM Trans. Accessible Comput.
+ACM Transactions on Algorithms	ACM Trans. Algorithms
+ACM Transactions on Applied Perception	ACM Trans. Appl. Percept.
+ACM Transactions on Architecture and Code Optimization	ACM Trans. Archit. Code Optim.
+ACM Transactions on Asian Language Information Processing	ACM Trans. Asian Lang. Inf. Process.
+ACM Transactions on Asian and Low-Resource Language Information Processing	ACM Trans. Asian Low-Resour. Lang. Inf. Process.
+ACM Transactions on Autonomous and Adaptive Systems	ACM Trans. Auton. Adapt. Syst.
+ACM Transactions on Computation Theory	ACM Trans. Comput. Theory
+ACM Transactions on Computational Logic	ACM Trans. Comput. Logic
+ACM Transactions on Computer Systems	ACM Trans. Comput. Syst.
+ACM Transactions on Computer-Human Interaction	ACM Trans. Comput.-Hum. Interact.
+ACM Transactions on Computing Education	ACM Trans. Comput. Educ.
+ACM Transactions on Computing for Healthcare	ACM Trans. Comput. Healthcare
+ACM Transactions on Cyber-Physical Systems	ACM Trans. Cyber-Phys. Syst.
+ACM Transactions on Database Systems	ACM Trans. Database Syst.
+ACM Transactions on Design Automation of Electronic Systems	ACM Trans. Des. Autom. Electron. Syst.
+ACM Transactions on Economics and Computation	ACM Trans. Econ. Comput.
+ACM Transactions on Embedded Computing Systems	ACM Trans. Embedded Comput. Syst.
+ACM Transactions on Evolutionary Learning	ACM Trans. Evol. Learn.
+ACM Transactions on Graphics	ACM Trans. Graphics
+ACM Transactions on Human-Robot Interaction	ACM Trans. Hum.-Rob. Interact.
+ACM Transactions on Information Systems	ACM Trans. Inf. Syst.
+ACM Transactions on Information and System Security	ACM Trans. Inf. Syst. Secur.
+ACM Transactions on Intelligent Systems and Technology	ACM Trans. Intell. Syst. Technol.
+ACM Transactions on Interactive Intelligent Systems	ACM Trans. Interact. Intell. Syst.
+ACM Transactions on Internet Technology	ACM Trans. Internet Technol.
+ACM Transactions on Internet of Things	ACM Trans. Internet Things
+ACM Transactions on Knowledge Discovery from Data	ACM Trans. Knowl. Discovery Data
+ACM Transactions on Management Information Systems	ACM Trans. Manage. Inf. Syst.
+ACM Transactions on Mathematical Software	ACM Trans. Math. Software
+ACM Transactions on Modeling and Computer Simulation	ACM Trans. Model. Comput. Simul.
+ACM Transactions on Modeling and Performance Evaluation of Computing Systems	ACM Trans. Model. Perform. Eval. Comput. Syst.
+ACM Transactions on Multimedia Computing Communications and Applications	ACM Trans. Multimedia Comput. Commun. Appl.
+ACM Transactions on Parallel Computing	ACM Trans. Parallel Comput.
+ACM Transactions on Privacy and Security	ACM Trans. Privacy Secur.
+ACM Transactions on Programming Languages and Systems	ACM Trans. Program. Lang. Syst.
+ACM Transactions on Quantum Computing	ACM Trans. Quantum Comput.
+ACM Transactions on Reconfigurable Technology and Systems	ACM Trans. Reconfigurable Technol. Syst.
+ACM Transactions on Sensor Networks	ACM Trans. Sens. Netw.
+ACM Transactions on Social Computing	ACM Trans. Social Comput.
+ACM Transactions on Software Engineering and Methodology	ACM Trans. Software Eng. Method.
+ACM Transactions on Spatial Algorithms and Systems	ACM Trans. Spatial Algorithms Syst.
+ACM Transactions on Speech and Language Processing	ACM Trans. Speech Lang. Process.
+ACM Transactions on Storage	ACM Trans. Storage
+ACM Transactions on the Web	ACM Trans. Web
+ACS Agricultural Science & Technology	ACS Agric. Sci. Technol.
 ACS Appl Mater Interfaces	ACS Appl. Mater. Interfaces
 ACS Appl. Mater. Interfaces	ACS Appl. Mater. Interfaces
 ACS Applied Bio Materials	ACS Appl. Bio Mater.

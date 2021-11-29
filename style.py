@@ -16,7 +16,7 @@ This script defines the debug output format.
 
 def log(text):
     """
-    :param text: {str} Log content
+    :param text: {str} Log content  |   green
     :return: null
     """
     print(f'\033[1;32mLog: {text}\033[0m')
@@ -24,7 +24,7 @@ def log(text):
 
 def warning(text):
     """
-    :param text: {str} Warning content
+    :param text: {str} Warning content  | yellow
     :return: null
     """
     print(f'\033[1;33mWaring: {text}\033[0m')
@@ -32,7 +32,15 @@ def warning(text):
 
 def error(text):
     """
-    :param text: {str} Error content
+    :param text: {str} Error content    |   red
     :return: null
     """
     print(f'\033[1;31mError: {text}\033[0m')
+
+
+def emphasize(text):
+    """
+    :param text: {str} Emphasize content    |   blue
+    :return: null
+    """
+    print(f'\033[1;34mEmphasize: {text}\033[0m')
