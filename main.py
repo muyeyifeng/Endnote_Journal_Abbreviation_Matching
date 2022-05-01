@@ -75,10 +75,10 @@ def equivalent_journal_name(j_name):
     if data is not None and j_name in data:
         return data[j_name]
     else:
-        return reverse_Lookup(j_name)
+        return reverse_lookup(j_name)
 
 
-def reverse_Lookup(j_name):
+def reverse_lookup(j_name):
     """
     :param j_name: {str} Journal name
     :return: {str} Journal full name from JCR or Berkeley
