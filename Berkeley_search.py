@@ -14,16 +14,16 @@ def check_page(j_name):
     :param j_name: {str} Journal name
     :return: {str} Page name
     """
-    asii = ord(j_name.lower()[0])
-    if asii == 97 or asii == 98:
+    _ascii = ord(j_name.lower()[0])
+    if _ascii == 97 or _ascii == 98:
         page = 'a-b'
-    elif 99 <= asii <= 103:
+    elif 99 <= _ascii <= 103:
         page = 'c-g'
-    elif 104 <= asii <= 106:
+    elif 104 <= _ascii <= 106:
         page = 'h-j'
-    elif 107 <= asii <= 113:
+    elif 107 <= _ascii <= 113:
         page = 'k-q'
-    elif 114 <= asii <= 122:
+    elif 114 <= _ascii <= 122:
         page = 'h-j'
     else:
         return None

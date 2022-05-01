@@ -9,7 +9,6 @@ from JCR_abbreviation import JCR_abbreviation_search as Jcr
 from style import log, warning, error, emphasize
 import rearrange
 
-
 local_journal_abbreviation = {}
 local_equivalent_journal_name = {}
 local_unmatched_journals = {}
@@ -97,7 +96,7 @@ def main_func(bib_text):
     :param bib_text: {str} Endnote export journal list path
     :return: {dict} Dictionary of journals' name from bib_text and their abbreviation
     """
-    j_names = Bt.read_bib_Txt(bib_text)
+    j_names = Bt.read_bib_txt(bib_text)
     if j_names is None:
         return None
     dict1 = {}
@@ -116,6 +115,7 @@ def main_func(bib_text):
 
         if abbreviation is not None:
             dict1[j_name] = abbreviation
+            local_journal_abbreviation[j_name] = abbreviation
             print(j_name, '=>', abbreviation)
             continue
         else:
@@ -153,10 +153,10 @@ def load_local_database():
 
     if not os.path.exists('Unmatched_journals.yml'):
         open('Unmatched_journals.yml', 'w', encoding='utf-8')
-    with open('Unmatched_journals.yml', 'r', encoding='utf-8') as f:
-        local_unmatched_journals = yaml.load(f, Loader=yaml.FullLoader)
+    # with open('Unmatched_journals.yml', 'r', encoding='utf-8') as f:
+    #    local_unmatched_journals = yaml.load(f, Loader=yaml.FullLoader)
 
-    if local_equivalent_journal_name is None or local_journal_abbreviation is None or local_unmatched_journals is None:
+    if local_equivalent_journal_name is None or local_journal_abbreviation is None:
         error('Loading local database error.')
     else:
         rearrange.clear('Unmatched_journals.yml')

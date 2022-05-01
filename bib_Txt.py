@@ -6,9 +6,9 @@ The purpose of this script is to read the list of journals exported by Endnote
 """
 
 
-def read_bib_Txt(path):
+def read_bib_txt(path):
     """
-    :param path: {str} Path of journals list exported by endnote x20
+    :param path: {str} Path of journals lists exported by endnote x20
     :return: {list} A list of journals' name
     """
     if os.path.exists(path):

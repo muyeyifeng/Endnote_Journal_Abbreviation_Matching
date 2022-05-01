@@ -34,7 +34,8 @@ def update_yaml_from_text(new_journal_abbrev_path, old_yaml_path):
     """
     :param new_journal_abbrev_path: {str} Journal abbreviation file from other project, especially the format is
     <journal name>;<abbrev>
-    :param old_yaml_path: {str} Journal_abbreviation.yml in this project. :return: null
+    :param old_yaml_path: {str} Journal_abbreviation.yml in this project.
+    :return: null
     """
     if os.path.exists(new_journal_abbrev_path) and os.path.exists(old_yaml_path):
         with open(old_yaml_path, "r", encoding="utf-8") as f:
@@ -70,14 +71,21 @@ def update_yaml_from_text(new_journal_abbrev_path, old_yaml_path):
 
 def write_result_txt(bib_path, dict1):
     """
+    :param bib_path:
     :param dict1: {dict} Dictionary of journals' name from bib_text and their abbreviation
     :return: null
     """
     if type(dict1) is not dict or dict1 is None:
         return None
     bib_name = bib_path[0:bib_path.rfind('.')]
-    path = f'{bib_name}_result.txt'
-    write_yaml_dict(path, dict1)
+    yaml_path = f'{bib_name}_result.yml'
+    if not os.path.exists(yaml_path):
+        open(yaml_path, 'w', encoding='utf-8')
+    write_yaml_dict(yaml_path, dict1)
+    text_path = f'{bib_name}_result.txt'
+    if not os.path.exists(text_path):
+        open(text_path, 'w', encoding='utf-8')
+    convert2txt(yaml_path, text_path)
 
 
 def convert2txt(yaml_path, text_path):
