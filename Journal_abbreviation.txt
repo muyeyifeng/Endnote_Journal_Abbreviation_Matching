@@ -8640,6 +8640,7 @@ Proceedings of the Latvian Academy of Sciences, Section B: Natural, Exact and Ap
 Proceedings of the Linnean Society of London	Proc. Linn. Soc. London
 Proceedings of the Linnean Society of New South Wales	Proc. Linn. Soc. N. S. W.
 Proceedings of the London Mathematical Society	Proc. London Math. Soc.
+Proceedings of the National Academy of Sciences	Proc. Natl. Acad. Sci. U.S.A.
 Proceedings of the National Academy of Sciences of the United States of America	Proc. Natl. Acad. Sci. U.S.A.
 Proceedings of the National academy of Sciences of the United States of America	Proc. Natl. Acad. Sci. U.S.A.
 Proceedings of the Nova Scotian Institute of Science	Proc. N. S. Inst. Sci.
