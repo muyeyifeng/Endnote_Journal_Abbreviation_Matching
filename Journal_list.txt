@@ -2003,6 +2003,7 @@ Chinese Journal of Geophysics	Chin. J. Geophys.
 Chinese Journal of Inorganic Chemistry	Chin. J. Inorg. Chem.
 Chinese Journal of Luminescence	Chinese J. Lumin.
 Chinese Journal of Mechanical Engineering	Chin. J. Mech. Eng.
+Chinese Journal of Mechanical Engineering(English Edition)
 Chinese Journal of Nuclear Physics	Chin. J. Nucl. Phys.
 Chinese Journal of Oceanology and Limnology	Chin. J. Oceanol. Limnol.
 Chinese Journal of Organic Chemistry	Chin. J. Org. Chem.
@@ -7176,6 +7177,7 @@ Material Science Research India	Mater. Sci. Res. India
 Materiales de Construccion	Mater. Constr.
 Materiali in Tehnologije	Mater. Tehnol.
 Materials	Materials
+Materials (Basel)
 Materials & Design	Mater. Des.
 Materials Advances	Mater. Adv.
 Materials and Corrosion	Mater. Corros.
@@ -8622,7 +8624,7 @@ Proceedings of the Latvian Academy of Sciences, Section B: Natural, Exact and Ap
 Proceedings of the Linnean Society of London	Proc. Linn. Soc. London
 Proceedings of the Linnean Society of New South Wales	Proc. Linn. Soc. N. S. W.
 Proceedings of the London Mathematical Society	Proc. London Math. Soc.
-Proceedings of the National Academy of Sciences
+Proceedings of the National Academy of Sciences	Proc. Natl. Acad. Sci. U.S.A.
 Proceedings of the National Academy of Sciences of the United States of America	Proc. Natl. Acad. Sci. U.S.A.
 Proceedings of the Nova Scotian Institute of Science	Proc. N. S. Inst. Sci.
 Proceedings of the Nutrition Society	Proc. Nutr. Soc.
