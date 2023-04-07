@@ -28,8 +28,7 @@ ACM Transactions on Applied Perception: ACM Trans. Appl. Percept.
 ACM Transactions on Architecture and Code Optimization: ACM Trans. Archit. Code Optim.
 ACM Transactions on Asian Language Information Processing: ACM Trans. Asian Lang.
   Inf. Process.
-ACM Transactions on Asian and Low-Resource Language Information Processing: ACM Trans.
-  Asian Low-Resour. Lang. Inf. Process.
+ACM Transactions on Asian and Low-Resource Language Information Processing: ACM Trans. Asian Low-Resour. Lang. Inf. Process.
 ACM Transactions on Autonomous and Adaptive Systems: ACM Trans. Auton. Adapt. Syst.
 ACM Transactions on Computation Theory: ACM Trans. Comput. Theory
 ACM Transactions on Computational Logic: ACM Trans. Comput. Logic
@@ -237,10 +236,10 @@ Acs Nano: ACS Nano
 Acs Sustainable Chemistry & Engineering: ACS Sustainable Chem. Eng.
 Acta Acustica: Acta Acust.
 Acta Acustica united with Acustica: Acta Acust. united Acust.
-'Acta Agriculturae Scandinavica Section A: Animal Science': Acta Agric. Scand. Sect
+'Acta Agriculturae Scandinavica Section A: Animal Science': Acta Agric. Scand. Sect.
   A
 'Acta Agriculturae Scandinavica Section B: Soil and Plant Science': Acta Agric. Scand.
-  Sect B
+  Sect. B
 Acta Agronomica Sinica: Acta Agron. Sin.
 Acta Amazonica: Acta Amazonica
 Acta Applicandae Mathematicae: Acta Appl. Math.
@@ -279,6 +278,7 @@ Acta Crystallographica Section E Structure Reports Online: 'Acta Crystallogr., S
   E: Struct. Rep. Online'
 'Acta Crystallographica Section F: Structural Biology and Crystallization Communications': 'Acta
   Crystallogr., Sect. F: Struct. Biol. Cryst. Commun.'
+Acta Dermato-Venereologica: Acta Derm.-Venereol.
 Acta Ecologica Sinica: Acta Ecol. Sin.
 Acta Farmaceutica Bonaerense: Acta Farm. Bonaerense
 Acta Genetica Sinica: Acta Genet. Sin.
@@ -319,6 +319,7 @@ Acta Physica Debrecina: Acta Phys. Debrecina
 Acta Physica Polonica A: Acta Phys. Pol. A
 Acta Physica Polonica B: Acta Phys. Pol. B
 Acta Physica Polonica Proceedings Supplement: Acta Phys. Pol. B. Proc. Suppl.
+Acta Physica Sinica: Acta. Phys. Sin.
 Acta Physica et Chimica Debrecina: Acta Phys. Chim. Debrecina
 Acta Physico-Chimica Sinica: Acta Phys. Chim. Sin.
 Acta Physiologica: Acta Physiol.
@@ -348,6 +349,7 @@ Adhesives Age: Adhes. Age
 Adsorption Science and Technology: Adsorpt. Sci. Technol.
 Adv Mater: Adv. Mater.
 Adv Perit Dial: Adv. Peritoneal Dial.
+Adv Sci (Weinh): Adv. Sci.
 Adv. Electron. Mater.: Adv. Electron. Mater.
 Advanced Bionics, Biokinetics and Biocybernetics: Adv. Bionics Biokinet. Biocybern.
 Advanced Biosystems: Adv. Biosyst.
@@ -832,20 +834,20 @@ Annals of the Entomological Society of America: Ann. Entomol. Soc. Am.
 Annals of the ICRP: Ann. ICRP
 Annals of the Missouri Botanical Garden: Ann. Mo. Bot. Gard.
 Annals of the New York Academy of Sciences: Ann. N. Y. Acad. Sci.
-'Annual Reports - Royal Society of Chemistry, Section Section A: Inorganic Chemistry': 'Annu.
-  Rep. R. Soc. Chem. Sect. A: Inorg. Chem.'
+'Annual Reports - Royal Society of Chemistry, Section Section A: Inorganic Chemistry': Annu.
+  Rep. R. Soc. Chem. Sect. A. Inorg. Chem.
 'Annual Reports - Royal Society of Chemistry, Section Section B: Organic Chemistry': Annu.
   Rep. R. Soc. Chem. Sect. B. Org. Chem.
 'Annual Reports - Royal Society of Chemistry, Section Section C: Physical Chemistry': Annu.
   Rep. R. Soc. Chem. Sect. C. Phys. Chem.
 Annual Reports in Medicinal Chemistry: Annu. Rep. Med. Chem.
 Annual Reports on Analytical Atomic Spectroscopy: Annu. Rep. Anal. At. Spectrosc.
-'Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry': 'Annu.
-  Rep. Prog. Chem. Sect. A: Inorg. Chem.'
-'Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry': 'Annu.
-  Rep. Prog. Chem. Sect. B: Org. Chem.'
-'Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry': 'Annu.
-  Rep. Prog. Chem. Sect. C: Phys. Chem.'
+'Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry': Annu.
+  Rep. Prog. Chem. Sect. A. Inorg. Chem.
+'Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry': Annu.
+  Rep. Prog. Chem. Sect. B. Org. Chem.
+'Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry': Annu.
+  Rep. Prog. Chem. Sect. C Phys. Chem.
 Annual Review in Control: Annu. Rev. Control
 Annual Review of Analytical Chemistry: Annu. Rev. Anal. Chem.
 Annual Review of Animal Biosciences: Annu. Rev. Anim. Biosci.
@@ -1650,6 +1652,7 @@ Botanical Review: Bot. Rev.
 Botany Letters: Bot. Lett.
 Boundary Value Problems: Boundary Value Probl.
 Boundary-Layer Meteorology: Boundary Layer Meteorol.
+Br J Ophthalmol: Br. J. Ophthalmol.
 Brain Connectivity: Brain Connect.
 Brain Impairment: Brain Impairment
 Brain Multiphysics: Brain Multiphys.
@@ -1698,6 +1701,7 @@ British Journal of Haematology: Br. J. Haematol.
 British Journal of Mathematical and Statistical Psychology: Br. J. Math. Stat. Psychol.
 British Journal of Medical Practitioners: Br. J. Med. Pract.
 British Journal of Nutrition: Br. J. Nutr.
+British Journal of Ophthalmology: Br. J. Ophthalmol.
 British Journal of Pharmacology: Br. J. Pharmacol.
 British Journal of Sports Medicine: Br. J. Sports Med.
 British Polymer Journa: Br. Polym. J.
@@ -2531,6 +2535,7 @@ Conservation and Management of Archaeological Sites: Conserv. Manage. Archaeol. 
 Construction Management and Economics: Construct. Manage. Econ.
 Construction Research and Innovation: Construct. Res. Innovation
 Construction and Building Materials: Constr. Build. Mater.
+Contact Dermatitis: Contact Dermatitis
 Contemporary Drug Problems: Contemp. Drug Probl.
 Contemporary Organic synthesis: Contemp. Org. Synth.
 Contemporary Physics: Contemp. Phys.
@@ -3215,6 +3220,7 @@ Equine and Comparative Exercise Physiology: Equine Comp. Exercise Physiol.
 Erdoel & Kohle Erdgas, Petrochemie: Erdoel, Kohle, Erdgas, Petrochem.
 Erdoel, Erdgas, Kohle: Erdoel, Erdgas, Kohle
 Ergodic Theory and Dynamical Systems: Ergod. Theory Dyn. Syst.
+Ergonomics: Ergonomics
 Ergonomics in Design: Ergon. Des.
 Ern\u00e4hrung - Wissenschaft und Praxis: Ernahrung Wiss. Prax.
 Estonian Journal of Engineering: Est. J. Eng.
@@ -3422,6 +3428,7 @@ Fatigue and Fracture of Engineering Materials and Structures: Fatigue Fract. Eng
 Feddes Repertorium: Feddes Repertorium
 Federal Register: Fed. Regist.
 Ferroelectric Letters Section: Ferroelectr. Lett. Sect.
+Ferroelectrics: Ferroelectrics
 Ferroelectrics Letters: Ferroelectr. Lett.
 Ferroelectrics Review: Ferroelectr. Rev.
 Fett - Lipid: Fett - Lipid
@@ -3649,6 +3656,7 @@ Frontiers in Computational Neuroscience: Front. Comput. Neurosci.
 Frontiers in Drug Design and Discovery: Front. Drug Des. Discovery
 Frontiers in Earth Science: Front. Earth Sci.
 Frontiers in Ecology and the Environment: Front. Ecol. Environ.
+Frontiers in Electronics: Front. Inf.
 Frontiers in Endocrinology: Front. Endocrinol.
 Frontiers in Energy Research: Front. Energy Res.
 Frontiers in Environmental Science: Front. Environ. Sci.
@@ -4258,6 +4266,7 @@ IEEE Systems, Man, and Cybernetics Magazine: IEEE Syst. Man Cybern. Mag.
 IEEE TRANSACTIONS ON INFORMATION TECHNOLOGY IN BIOMEDICINE: IEEE Trans. Inf. Technol.
   Biomed.
 IEEE Technology and Society Magazine: IEEE Technol. Soc. Mag.
+IEEE Trans Biomed Eng: IEEE Trans. Biomed. Eng.
 IEEE Transactions on Acoustics, Speech, and Signal Processing: IEEE Trans. Acoust.
   Speech Signal Process.
 IEEE Transactions on Advanced Packaging: IEEE Trans. Adv. Packag.
@@ -5681,8 +5690,10 @@ Italian Journal of Pure and Applied Mathematics: Ital. J. Pure Appl. Math.
 Izvestiya Atmospheric and Oceanic Physics: Izv. Atmos. Oceanic Phys.
 Izvestiya Physics of the Solid Earth: Izv. Phys. Solid Earth
 'Izvestiya: Mathematics': Izv. Math.
+J Biomech: J. Biomech.
 J Colloid Interface Sci: J. Colloid Interface Sci.
 J Endocrinol: J. Endocrinol.
+J Hand Surg Am: J. Hand Surg. (Am. Vol.)
 J-FOR Journal of Science & Technology for Forest Products and Processes: J-FOR
 J. Ind. Text.: J. Ind. Text.
 J. Mater. Chem. A: J. Mater. Chem. A
@@ -5703,6 +5714,7 @@ JMIR Serious Games: JMIR Serious Games
 JMM Case Reports: JMM Case Rep.
 JOM Journal of the Minerals Metals and Materials Society: JOM
 JOT Journal fur Oberflaechentechnik: JOT, J. Oberflaechentech.
+JOURNAL OF BIOMECHANICS: J. Biomech.
 JOURNAL OF COLLOID AND INTERFACE SCIENCE: J. Colloid Interface Sci.
 JOURNAL OF ENDOCRINOLOGY: J. Endocrinol.
 JOURNAL OF MEDICAL ENGINEERING & TECHNOLOGY: J. Med. Eng. Technol.
@@ -5714,12 +5726,12 @@ JPC Journal of Planar Chromatography Modern TLC: JPC J. Planar Chromatogr. - Mod
 JPhys Energy: JPhys Energy
 JPhys Materials: JPhys Mater.
 JPhys Photonics: JPhys Photonics
-'JSME International Journal Series A: Mechanics and Material Engineering': JSME Int
+'JSME International Journal Series A: Mechanics and Material Engineering': JSME Int.
   J., Ser. A
-'JSME International Journal Series B: Fluids and Thermal Engineering': JSME Int J.,
+'JSME International Journal Series B: Fluids and Thermal Engineering': JSME Int. J.,
   Ser. B
 'JSME International Journal Series C: Mechanical Systems Machine Elements and Manufacturing': JSME
-  Int J., Ser. C
+  Int. J., Ser. C
 Jahrbuch Max Planck Gesellschaft: Jahrb. Max Planck Gesell.
 Jahrbuch Oberflachentechnik: Jahrb. Oberflachentech.
 Jahrbuch der Deutschen Luftfahrtforschung: Jahrb. Dtsch. Luftfahrtforsch.
@@ -6347,8 +6359,8 @@ Journal of Environmental Science and Health, Part A Environmental Science: J. En
   Sci. Health., Part A
 'Journal of Environmental Science and Health, Part A: Environmental Science and Engineering': J.
   Environ. Sci. Health. Part A Environ. Sci. Health Part A Environ. Sci. Eng
-? 'Journal of Environmental Science and Health, Part A: Environmental Science and
-  Engineering & Toxic and Hazardous Substance Control'
+? 'Journal of Environmental Science and Health, Part A: Environmental Science andEngineering
+  & Toxic and Hazardous Substance Control'
 : J. Environ. Sci. Health., Part A Environ. Sci. Eng.Toxic Hazard. Subst. Control
 'Journal of Environmental Science and Health, Part A: Toxic-Hazardous Substances & Environmental Engineering': J.
   Environ. Sci. Health. Part A Toxic/Hazard. Subst. Environ. Eng.
@@ -6539,6 +6551,7 @@ Journal of Global Oncology: J. Global Oncol.
 Journal of Global Optimization: J. Global Optim.
 Journal of Graph Theory: J. Graph Theory
 Journal of Great Lakes Research: J. Great Lakes Res.
+Journal of Hand Surgery (American Volume): J. Hand Surg. (Am. Vol.)
 Journal of Hard Tissue Biology: J. Hard Tissue Biol.
 Journal of Hazardous Materials Letters: J. Hazard. Mater. Lett.
 Journal of Hazardous materials: J. Hazard. Mater.
@@ -7876,6 +7889,7 @@ Macedonian Journal of Chemistry and Chemical Engineering: Maced. J. Chem. Chem. 
 Machine Learning with Applications: Mach. Learn. Appl.
 'Machine Learning: Science and Technology': 'Mach. Learn.: Sci. Technol.'
 Machining Science and Technology: Mach. Sci. Technol.
+Macromol Rapid Commun: Macromol. Rapid Commun.
 Macromolecular Bioscience: Macromol. Biosci.
 Macromolecular Chemistry and Physics: Macromol. Chem. Phys.
 Macromolecular Chemistry and Physics Supplement: Macromol. Chem. Phys. Suppl.
@@ -7885,6 +7899,7 @@ Macromolecular Reaction Engineering: Macromol. React. Eng.
 Macromolecular Research: Macromol. Res.
 Macromolecular Symposia: Macromol. Symp.
 Macromolecular Theory and Simulations: Macromol. Theory Simul.
+Macromolecules: Macromolecules
 Maejo International Journal of Science and Technology: Maejo Int. J. Sci. Technol.
 Magazine of Concrete Research: Mag. Concr. Res.
 Magnesium Research: Magnesium Res.
@@ -7958,6 +7973,7 @@ Materiales de Construccion: Mater. Constr.
 Materiali in Tehnologije: Mater. Tehnol.
 Materials: Materials
 Materials & Design: Mater. Des.
+Materials (Basel): Materials
 Materials Advances: Mater. Adv.
 Materials Australia: Mater. Aust.
 Materials Characterization: Mater. Charact.
@@ -8070,6 +8086,7 @@ Mathematische Zeitschrift: Math. Z.
 Mathematische und Naturwissenschaftliche Unterricht: Math. Naturwiss. Unterr.
 Matrix Biology: Matrix Biol.
 Matrix Biology Plus: Matrix Biol. Plus
+Matter: Matter
 Matter and Radiation at Extremes: Matter Radiat. Extremes
 Measurement Science and Technology: Meas. Sci. Technol.
 Measurement Techniques: Meas. Tech.
@@ -8214,6 +8231,8 @@ Microelectronics Reliability: Microelectron. Reliab.
 Microfluidics and Nanofluidics: Microfluid. Nanofluid.
 Microgram Journal: Microgram J.
 Microgravity Science and Technology: Microgravity Sci. Technol.
+Micromachines: Micromachines
+Micromachines (Basel): Micromachines
 Micron and Microscopica Acta: Micron Microsc. Acta
 Microplastics and Nanoplastics: Microplast. Nanoplast.
 Microporous Materials: Microporous Mater.
@@ -8458,6 +8477,7 @@ Nanomaterials and Nanotechnology: Nanomater. Nanotechnol.
   Technol.: Int. J.'
 'Nanomedicine: Nanotechnology, Biology and Medicine': Nanomed. Nanotechnol. Biol.
   Med.
+Nanomicro Lett: Nano-Micro Lett.
 Nanoscale: Nanoscale
 Nanoscale Advances: Nanoscale Adv.
 Nanoscale Horizons: Nanoscale Horiz.
@@ -8944,6 +8964,7 @@ PMC Physics B: PMC Phys. B
 PMSE Preprints: PMSE Prepr.
 PPAR Research: PPAR Res.
 PROGRESS IN CHEMISTRY: Prog. Chem.
+PROSTHETICS AND ORTHOTICS INTERNATIONAL: Prosthet. Orthot. Int.
 PRX Quantum: PRX Quantum
 Pacific Conservation Biology: Pac. Conserv. Biol.
 Pacific Journal of Mathematics: Pac. J. Math.
@@ -9093,6 +9114,8 @@ Philosophical Magazine Letters: Philos. Mag. Lett.
   Trans. R. Soc. London, Ser. A
 'Philosophical Transactions of the Royal Society of London, Series B: Biological Sciences': Philos.
   Trans. R. Soc. London, Ser. B
+Philosophical Transactions of the Royal Society of London. Series A, Mathematical and Physical Sciences: Philos.
+  Trans. R. Soc. A
 Phosphorus Sulfur Silicon and the Related Elements: Phosphorus, Sulfur Silicon Relat.
   Elem.
 Phosphorus Sulfur and Related Elements: Phosphorus Sulfur Rel. Elem.
@@ -9292,6 +9315,7 @@ Polish Journal of Zoology: Pol. J. Zool.
 Politics and the Life Sciences: Polit. Life Sci.
 Pollution Atmospherique: Pollut. Atmos.
 Polycyclic Aromatic Compounds: Polycyclic Aromat. Compd.
+Polymer: Polymer
 Polymer - Plastics Technology and Engineering: Polym. Plast. Technol. Eng.
 Polymer Bulletin: Polym. Bull.
 Polymer Chemistry: Polym. Chem.
@@ -9365,6 +9389,7 @@ Probabilistic Engineering Mechanics: Probab. Eng. Mech.
 Probability Theory and Related Fields: Probab. Theory Relat. Fields
 Probability in the Engineering and Informational Sciences: Probab. Eng. Inf. Sci.
 Probiotics and Antimicrobial Proteins: Probiotics Antimicrob. Proteins
+Proc Natl Acad Sci U S A: Proc. Natl. Acad. Sci. U.S.A
 Procedia CIRP: Procedia CIRP
 Procedia Chemistry: Procedia Chem.
 Procedia Computer Science: Procedia Comput. Sci.
@@ -9528,6 +9553,8 @@ Proceedings of the Royal Entomological Society of London Series B Taxonomy: Proc
   R. Entomol. Soc. London Ser. B Taxon.
 Proceedings of the Royal Society of London Series A: Proc. R. Soc. London, Ser. A
 Proceedings of the Royal Society of London Series B: Proc. R. Soc. London, Ser. B
+Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences: Proc.
+  Math. Phys. Eng.
 Proceedings of the Royal Society of Victoria: Proc. R. Soc. Victoria
 Proceedings of the Society for Analytical Chemistry: Proc. Soc. Anal. Chem.
 Proceedings of the Society for Experimental Biology and Medicine: Proc. Soc. Exp.
@@ -9591,8 +9618,7 @@ Progress in Paper Recycling: Prog. Pap. Recycl.
 Progress in Particle and Nuclear Physics: Prog. Part. Nucl. Phys.
 'Progress in Photovoltaics: Research and Applications': Prog. Photovoltaics Res. Appl.
 Progress in Physical Geography: Prog. Phys. Geogr.
-'Progress in Physical Geography: Earth and Environment': 'Prog. Phys. Geogr.: Earth
-  Environ.'
+'Progress in Physical Geography: Earth and Environment': 'Prog. Phys. Geogr.: Earth  Environ.'
 Progress in Polymer Science: Prog. Polym. Sci.
 Progress in Quantum Electronics: Prog. Quantum Electron.
 Progress in Reaction Kinetics: Prog. React. Kinet.
@@ -9609,6 +9635,7 @@ Progress of Theoretical Physics Supplement: Prog. Theor. Phys. Suppl.
 Progress of Theoretical and Experimental Physics: Prog. Theor. Exp. Phys.
 Propellants, Explosives, Pyrotechnics: Propellants Explos. Pyrotech.
 Propulsion and Power Research: Propul. Power Res.
+Prosthet Orthot Int: Prosthet. Orthot. Int.
 Protection of Metals: Prot. Met.
 Protection of Metals and Physical Chemistry of Surfaces: Prot. Met. Phys. Chem
 Protein & Peptide Letters: Protein Pept. Lett.
@@ -9693,6 +9720,8 @@ RIAI  Revista Iberoamericana de Automatica e Informatica Industrial: Rev. Iberoa
   Autom. Inf. Ind.
 RIC Reviews: RIC Rev.
 RNA Biology: RNA Biol.
+RSC ADVANCES: RSC Adv.
+RSC Adv: RSC Adv.
 RSC Adv.: RSC Adv.
 RSC Advances: RSC Adv.
 RSC Chemical Biology: RSC Chem. Biol.
@@ -10103,6 +10132,7 @@ Science China Chemistry: Sci. China Chem.
 Science China Materials: Sci. China Mater.
 Science China Mathematics: Sci. China Math.
 Science China Technological Sciences: Sci. China Technol. Sci.
+Science China-Chemistry: Sci. China Chem.
 Science Foundation in China: Sci. Found. China
 Science Immunology: Sci. Immunol.
 Science News: Sci. News
@@ -10185,6 +10215,7 @@ Sensing and Bio-Sensing Research: Sens. Bio-Sens. Res.
 Sensing and Instrumentation for Food Quality and Safety: Sens. Instrum. Food Qual.
   Saf.
 Sensor Letters: Sens. Lett.
+Sensor Review: Sens. Rev.
 Sensors: Sensors
 Sensors (Basel): Sensors
 Sensors International: Sens. Int.
@@ -10644,6 +10675,7 @@ Toxicology in Vitro: Toxicol. in Vitro
 Toxin Reviews: Toxin Rev.
 Trace Elements and Electrolytes: Trace Elem. Electrolytes
 Traffic Injury Prevention: Traffic Inj. Prev.
+Trans. Faraday Soc.: Trans. Faraday Soc.
 Transactions in GIS: Trans. GIS.
 Transactions of A. Razmadze Mathematical Institute: Trans. A. Razmadze Math. Inst.
 Transactions of FAMENA: Trans. FAMENA
@@ -10664,8 +10696,8 @@ Transactions of the American Institute of Electrical Engineers: Trans. Am. Inst.
 Transactions of the American Institute of Metals: Trans. Am. Inst. Met.
 Transactions of the American Institute of Mining, Metallurgical and Petroleum Engineers: Trans.
   Am. Inst. Min. Metall. Pet. Eng.
-? Transactions of the American Institute of Mining, Metallurgical and Petroleum Engineers,
-  Society of Mining Engineers of AIME
+? Transactions of the American Institute of Mining, Metallurgical and Petroleum Engineers,Society
+  of Mining Engineers of AIME
 : Trans. Am. Inst. Min. Metall. Pet. Eng. Soc. Min. Eng. AIME
 Transactions of the American Mathematical Society: Trans. Am. Math. Soc.
 Transactions of the American Nuclear Society: Trans. Am. Nucl. Soc.
@@ -11194,6 +11226,7 @@ e-Journal of Surface Science and Nanotechnology: e-J. Surf. Sci. Nanotechnol.
 eXPRESS Polymer Letters: eXPRESS Polym. Lett.
 iForest: iForest
 iForest - Biogeosciences and Forestry: iForest - Biogeosc. For.
+iScience: iScience
 in silico Plants: in silico Plants
 npj 2D Materials and Applications: npj 2D Mater. Appl.
 npj Aging and Mechanisms of Disease: npj Aging Mech. Dis.
