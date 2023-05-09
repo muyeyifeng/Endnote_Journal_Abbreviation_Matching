@@ -272,6 +272,7 @@ def completed():
 if __name__ == '__main__':
     if install_requires():
         os.system("python3 main.py")
+        exit(-1)
     import yaml
     from data_from_website import Berkeley_search as Ber, CASSI_search as Cas
     from other_func import rearrange, bib_Txt as Bt
