@@ -1,78 +1,117 @@
 import yaml
 import os
-import Auxiliary_method as Am
-import Berkeley_search as Ber
-import bib_Txt as Bt
-import CASSI_search as Cas
-import Paperpile_search as Pap
-from JCR_abbreviation import JCR_abbreviation_search as Jcr
-from style import log, warning, error, emphasize
-import rearrange
+import time
+from data_from_website import Berkeley_search as Ber, CASSI_search as Cas
+from search_func.Journal_abbreviation import find_abbreviation_match as fabb
+from other_func.Auxiliary_method import is_contain_chinese as is_chinese
+from other_func import rearrange, bib_Txt as Bt
+from other_func.style import log, warning, error, emphasize
 
 local_journal_abbreviation = {}
-local_equivalent_journal_name = {}
-local_unmatched_journals = {}
+local_journal_full_name = {}
+local_unmatched_full_name = {}
+local_unmatched_abbreviation = {}
 
 
-def find_matches(j_name):
+def load_journal_abbreviation():
     """
-    :param j_name: {str} Journal name
-    :return: {str} Journal_abbreviation
+    :return:
     """
     global local_journal_abbreviation
-    log('Use Local')
-    local_result = local_database_comparison(j_name)
-    if local_result is not None:
-        return local_result
-
-    log('Use Berkeley')
-    ber_result = Ber.search(j_name)
-    if ber_result is not None:
-        local_journal_abbreviation[j_name] = ber_result
-        return ber_result
-
-    log('Use Paperpile')
-    pap_result = Pap.search(j_name)
-    if pap_result is not None:
-        local_journal_abbreviation[j_name] = pap_result
-        return pap_result
-
-    log('Use CASSI')
-    cas_result = Cas.search(j_name)
-    if cas_result is not None:
-        local_journal_abbreviation[j_name] = cas_result
-        return cas_result
-    return None
+    if not os.path.exists('local_database/Journal_abbreviation.yml'):
+        open('local_database/Journal_abbreviation.yml', 'w', encoding='utf-8')
+    with open('local_database/Journal_abbreviation.yml', 'r', encoding='utf-8') as f:
+        local_journal_abbreviation = yaml.load(f, Loader=yaml.FullLoader)
 
 
-def local_database_comparison(j_name):
+def load_journal_full_name():
     """
-    :param j_name: {str} Journal name
-    :return: {str} Journal_abbreviation from local_database
+    :return:
     """
-    if j_name in local_journal_abbreviation:
-        return local_journal_abbreviation[j_name]
-    return None
+    global local_journal_full_name
+    if not os.path.exists('local_database/Journal_full_name.yml'):
+        open('local_database/Journal_full_name.yml', 'w', encoding='utf-8')
+    with open('local_database/Journal_full_name.yml', 'r', encoding='utf-8') as f:
+        local_journal_full_name = yaml.load(f, Loader=yaml.FullLoader)
 
 
-def equivalent_journal_name_local(j_name):
+def load_unmatched_full_name():
+    """
+    :return:
+    """
+    if not os.path.exists('local_database/Unmatched_full_name.yml'):
+        open('local_database/Unmatched_full_name.yml', 'w', encoding='utf-8')
+
+
+def load_unmatched_abbreviation():
+    """
+    :return:
+    """
+    if not os.path.exists('local_database/Unmatched_abbreviation.yml'):
+        open('local_database/Unmatched_abbreviation.yml', 'w', encoding='utf-8')
+
+
+def load_local_database():
+    """
+    :return: null
+    """
+    load_unmatched_abbreviation()
+    load_unmatched_full_name()
+    load_journal_abbreviation()
+    load_journal_full_name()
+    if local_journal_full_name is None or local_journal_abbreviation is None:
+        error('Loading local database error.')
+    else:
+        rearrange.clear('local_database/Unmatched_full_name.yml')
+        rearrange.clear('local_database/Unmatched_abbreviation.yml')
+
+
+def input_journal_list_path():
+    """
+    :return: input_journal_list_path
+    """
+    paths = []
+    while True:
+        log('Input bib_text path. (eg. ./Journal_list.txt or D://Journal_list.txt)')
+        log('Default: ./input_journal_list/Journal_list.txt')
+        log('Input 0 or empty to complete.')
+        bit_text_tmp = input('Path:\t')
+        if bit_text_tmp == '0' or bit_text_tmp == 0 or bit_text_tmp == '' or bit_text_tmp is None:
+            if len(paths) == 0:
+                paths.append(r'./input_journal_list/Journal_list.txt')
+            break
+
+        if os.path.isdir(bit_text_tmp):
+            warning('Input a directory path.')
+            warning('Expect the input path to point to a file.')
+        elif os.path.exists(bit_text_tmp):
+            emphasize('File does exists.')
+            paths.append(bit_text_tmp)
+        else:
+            warning('The entered directory does not exist.')
+    return paths
+
+
+def journal_full_name_local(j_name):
     """
     :param j_name: {str} Non-stander journal name
     :return: {str} Journal full name from local database
     """
-    if j_name in local_equivalent_journal_name:
-        return local_equivalent_journal_name[j_name]
+    global local_journal_full_name
+
+    if j_name in local_journal_full_name:
+        return local_journal_full_name[j_name]
     return None
 
 
-def equivalent_journal_name(j_name):
+def find_journal_full_name(j_name):
     """
     :param j_name: {str} Journal name
     :return: {str} Journal full name
     """
-    data = equivalent_journal_name_local(j_name)
-    if data is not None and j_name in data:
-        return data[j_name]
+    full_name = journal_full_name_local(j_name)
+    if full_name is not None:
+        return full_name
     else:
         return reverse_lookup(j_name)
 
@@ -82,16 +121,69 @@ def reverse_lookup(j_name):
     :param j_name: {str} Journal name
     :return: {str} Journal full name from JCR or Berkeley
     """
-    jcr_result = Jcr(j_name)
-    if jcr_result is not None:
-        return jcr_result
+    cas_result = Cas.reverse_lookup(j_name)
+    if cas_result is not None:
+        return cas_result
+
     ber_result = Ber.reverse_lookup(j_name)
     if ber_result is not None:
         return ber_result
+
     return None
 
 
-def main_func(bib_text):
+def search_fullname(j_name):
+    """
+    :param j_name:
+    :return:
+    """
+    global local_journal_full_name, local_unmatched_full_name
+
+    j_full_name = journal_full_name_local(j_name)
+    if j_full_name is None:
+        warning(f'{j_name} may be a non-standard journal name.')
+        warning('Try to find the full name of the journal.')
+        j_full_name = find_journal_full_name(j_name)
+
+    if j_full_name is None:
+        error(f'Unable to find the full name of the journal. {j_name}')
+        local_unmatched_full_name[j_name] = None
+        update_local_unmatched_full_name()
+    else:
+        log(f'Find the full name of the journal. {j_full_name}')
+        local_journal_full_name[j_name] = j_full_name
+        update_local_full_name()
+
+    return j_full_name
+
+
+def search_abbreviation(j_name, j_full_name):
+    """
+    :param j_name:
+    :param j_full_name:
+    :return:
+    """
+    global local_journal_abbreviation
+
+    abbreviation = fabb(j_name)
+    if abbreviation is None and j_full_name is not None:
+        warning(f'{j_name} may be a non-standard journal name.')
+        warning('Try to find the full name of the journal.')
+        abbreviation = fabb(j_full_name)
+
+    if abbreviation is None:
+        error(f'Unable to find the abbreviation of the journal. {j_name}')
+        local_unmatched_abbreviation[j_name] = None
+        update_local_unmatched_abbreviation()
+    else:
+        log(f'Find the abbreviation of the journal. {j_name}')
+        local_journal_abbreviation[j_name] = abbreviation
+        update_local_abbreviation()
+
+    return abbreviation
+
+
+def search_func(bib_text):
     """
     :param bib_text: {str} Endnote export journal list path
     :return: {dict} Dictionary of journals' name from bib_text and their abbreviation
@@ -100,114 +192,95 @@ def main_func(bib_text):
     if j_names is None:
         return None
     dict1 = {}
+    total = len(j_names)
+    i = 0
     for j_name in j_names:
+        abb_child = {}
+        localtime = time.asctime(time.localtime(time.time()))
+        log(f'{localtime}\n{i}/{total}')
         log('Check journal name.')
-        if Am.is_contain_chinese(j_name):
+        if is_chinese(j_name):
             warning('Chinese Journal.')
             continue
 
-        ejn = equivalent_journal_name_local(j_name)
-        if ejn is not None and ejn != j_name:
-            log(f'{j_name} may not be the full name of the journal, the full name is {ejn}')
-            abbreviation = find_matches(ejn)
-        else:
-            abbreviation = find_matches(j_name)
+        j_full_name = search_fullname(j_name)
+        abb_child["full"] = j_full_name
 
-        if abbreviation is not None:
-            dict1[j_name] = abbreviation
-            local_journal_abbreviation[j_name] = abbreviation
-            print(j_name, '=>', abbreviation)
-            continue
-        else:
-            warning(f'{j_name} may be a non-standard journal name.')
-            warning('Try to find the full name of the journal.')
-            ejn = equivalent_journal_name(j_name)
-            if ejn is not None:
-                log(f'Find the full name of the journal. {ejn}')
-                local_equivalent_journal_name[j_name] = ejn
+        abbreviation = search_abbreviation(j_name, j_full_name)
+        abb_child["abbreviation"] = abbreviation
 
-                abbreviation = find_matches(ejn)
-                if abbreviation is not None:
-                    dict1[j_name] = abbreviation
-                    print(j_name, '=>', abbreviation)
-                    continue
-            else:
-                warning('Unable to find the full name of the journal.')
-        local_unmatched_journals[j_name] = None
-        error(f'No match. {j_name}')
+        dict1[j_name] = abb_child
     return dict1
 
 
-def load_local_database():
-    global local_journal_abbreviation, local_equivalent_journal_name, local_unmatched_journals
+def update_local_full_name():
+    """
+    :return:
+    """
+    global local_journal_full_name
+    emphasize(f'Writing Journal_full_name.yml')
+    rearrange.write_yaml_dict('local_database/Journal_full_name.yml', local_journal_full_name)
+    emphasize('Completed.')
 
-    if not os.path.exists('Journal_abbreviation.yml'):
-        open('Journal_abbreviation.yml', 'w', encoding='utf-8')
-    with open('Journal_abbreviation.yml', 'r', encoding='utf-8') as f:
-        local_journal_abbreviation = yaml.load(f, Loader=yaml.FullLoader)
 
-    if not os.path.exists('Equivalent_journal_name.yml'):
-        open('Equivalent_journal_name.yml', 'w', encoding='utf-8')
-    with open('Equivalent_journal_name.yml', 'r', encoding='utf-8') as f:
-        local_equivalent_journal_name = yaml.load(f, Loader=yaml.FullLoader)
+def update_local_abbreviation():
+    """
+    :return:
+    """
+    global local_journal_abbreviation
+    emphasize(f'Writing Journal_abbreviation.yml')
+    rearrange.write_yaml_dict('local_database/Journal_abbreviation.yml', local_journal_abbreviation)
+    emphasize('Completed.')
 
-    if not os.path.exists('Unmatched_journals.yml'):
-        open('Unmatched_journals.yml', 'w', encoding='utf-8')
-    # with open('Unmatched_journals.yml', 'r', encoding='utf-8') as f:
-    #    local_unmatched_journals = yaml.load(f, Loader=yaml.FullLoader)
 
-    if local_equivalent_journal_name is None or local_journal_abbreviation is None:
-        error('Loading local database error.')
-    else:
-        rearrange.clear('Unmatched_journals.yml')
+def update_local_unmatched_full_name():
+    """
+    :return:
+    """
+    global local_unmatched_full_name
+    emphasize(f'Writing Unmatched_full_name.yml')
+    rearrange.write_yaml_dict('local_database/Unmatched_full_name.yml', local_unmatched_full_name)
+    emphasize('Completed.')
+
+
+def update_local_unmatched_abbreviation():
+    """
+    :return:
+    """
+    global local_unmatched_abbreviation
+    emphasize(f'Writing Unmatched_abbreviation.yml')
+    rearrange.write_yaml_dict('local_database/Unmatched_abbreviation.yml', local_unmatched_abbreviation)
+    emphasize('Completed.')
+
+
+def convert_journal_abbreviation_yml2txt():
+    """
+    :return:
+    """
+    emphasize(f'Convert Journal_abbreviation.yml => Journal_abbreviation.txt')
+    rearrange.convert2txt('local_database/Journal_abbreviation.yml', 'output_files/Journal_abbreviation.txt')
+    emphasize('Completed.')
 
 
 def completed():
-    global local_journal_abbreviation, local_equivalent_journal_name, local_unmatched_journals
-
-    emphasize(f'Writing Equivalent_journal_name.yml')
-    rearrange.write_yaml_dict('Equivalent_journal_name.yml', local_equivalent_journal_name)
-    emphasize('Completed.')
-    emphasize(f'Writing Journal_abbreviation.yml')
-    rearrange.write_yaml_dict('Journal_abbreviation.yml', local_journal_abbreviation)
-    emphasize('Completed.')
-    emphasize(f'Writing Unmatched_journals.yml')
-    rearrange.write_yaml_dict('Unmatched_journals.yml', local_unmatched_journals)
-    emphasize('Completed.')
-
-    emphasize(f'Convert Unmatched_journals.yml => Unmatched_journals.txt')
-    rearrange.convert2txt('Unmatched_journals.yml', 'Unmatched_journals.txt')
-    emphasize('Completed.')
-    emphasize(f'Convert Journal_abbreviation.yml => Journal_abbreviation.txt')
-    rearrange.convert2txt('Journal_abbreviation.yml', 'Journal_abbreviation.txt')
-    emphasize('Completed.')
+    """
+    :return:
+    """
+    update_local_full_name()
+    update_local_abbreviation()
+    update_local_unmatched_full_name()
+    update_local_unmatched_abbreviation()
+    convert_journal_abbreviation_yml2txt()
 
 
 if __name__ == '__main__':
     load_local_database()
-    bib_text_paths = []
-    while True:
-        log('Input bib_text path. (eg. ./Journal_list.txt or D://Journal_list.txt)')
-        log('Has default: ./Journal_list.txt')
-        log('Input 0 or empty to complete.')
-        bit_text_tmp = input('Path:\t')
-        if bit_text_tmp == '0' or bit_text_tmp == 0 or bit_text_tmp == '' or bit_text_tmp is None:
-            if len(bib_text_paths) == 0:
-                bib_text_paths.append(r'./Journal_list.txt')
-            break
-
-        if os.path.isdir(bit_text_tmp):
-            warning('Input a directory path.')
-            warning('Expect the input path to point to a file.')
-        elif os.path.exists(bit_text_tmp):
-            emphasize('File does exists.')
-            bib_text_paths.append(bit_text_tmp)
-        else:
-            warning('The entered directory does not exist.')
-
+    bib_text_paths = input_journal_list_path()
     emphasize(str(bib_text_paths))
+    time.sleep(2)
+
     for bib_text_path in bib_text_paths:
-        result_dict1 = main_func(bib_text_path)
+        result_dict1 = search_func(bib_text_path)
         if result_dict1 is not None:
             emphasize(f'Writing result for {bib_text_path}.')
             rearrange.write_result_txt(bib_text_path, result_dict1)
