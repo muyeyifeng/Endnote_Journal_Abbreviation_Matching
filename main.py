@@ -193,7 +193,7 @@ def search_func(bib_text):
     for j_name in j_names:
         abb_child = {}
         localtime = time.asctime(time.localtime(time.time()))
-        log(f'{localtime}\n{i}/{total}')
+        log(f'{localtime}\t{i}/{total}')
         log('Check journal name.')
         if is_chinese(j_name):
             warning('Chinese Journal.')
