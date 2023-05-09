@@ -24,5 +24,5 @@ def install_requires():
     :return:
     """
     require_dict = {"yaml": "pyyaml", "requests": "requests", "beautifulsoup4": "beautifulsoup4"}
-    for (requirement, package) in require_dict:
-        check_requirement(requirement, package)
+    for key in require_dict:
+        check_requirement(key, require_dict[key])
