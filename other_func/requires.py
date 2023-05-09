@@ -15,7 +15,7 @@ def check_requirement(package):
         if inquiry == "y":
             import os
             print("Execute commands: pip install {0}".format(package))
-            os.system("pip install {0}".format(package))
+            os.system("pip3 install {0}".format(package))
         else:
             print("{0} is missing, so the program exits!".format(package))
             exit(-1)
