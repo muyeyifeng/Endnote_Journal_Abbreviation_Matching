@@ -19,7 +19,7 @@ def install_requires():
     """
     :return:
     """
-    require_dict = {"yaml": "pyyaml", "requests": "requests", "beautifulsoup4": "beautifulsoup4"}
+    require_dict = {"yaml": "pyyaml", "requests": "requests", "bs4": "beautifulsoup4"}
     flag = False
     for key in require_dict:
         flag = check_requirement(key, require_dict[key])
