@@ -1,12 +1,12 @@
-import yaml
 import os
 import time
+
 from data_from_website import Berkeley_search as Ber, CASSI_search as Cas
-from other_func.requires import install_requires
-from search_func.Journal_abbreviation import find_abbreviation_match as fabb
-from other_func.Auxiliary_method import is_contain_chinese as is_chinese
 from other_func import rearrange, bib_Txt as Bt
+from other_func.Auxiliary_method import is_contain_chinese as is_chinese
+from other_func.requires import install_requires
 from other_func.style import log, warning, error, emphasize
+from search_func.Journal_abbreviation import find_abbreviation_match as fabb
 
 local_journal_abbreviation = {}
 local_journal_full_name = {}
@@ -276,6 +276,8 @@ def completed():
 
 if __name__ == '__main__':
     install_requires()
+    import yaml
+
     load_local_database()
     bib_text_paths = input_journal_list_path()
     emphasize(str(bib_text_paths))
