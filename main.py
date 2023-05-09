@@ -2,6 +2,7 @@ import yaml
 import os
 import time
 from data_from_website import Berkeley_search as Ber, CASSI_search as Cas
+from other_func.requires import install_requires
 from search_func.Journal_abbreviation import find_abbreviation_match as fabb
 from other_func.Auxiliary_method import is_contain_chinese as is_chinese
 from other_func import rearrange, bib_Txt as Bt
@@ -274,6 +275,7 @@ def completed():
 
 
 if __name__ == '__main__':
+    install_requires()
     load_local_database()
     bib_text_paths = input_journal_list_path()
     emphasize(str(bib_text_paths))
