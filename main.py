@@ -206,6 +206,7 @@ def search_func(bib_text):
         abb_child["abbreviation"] = abbreviation
 
         dict1[j_name] = abb_child
+        i += 1
     return dict1
 
 
